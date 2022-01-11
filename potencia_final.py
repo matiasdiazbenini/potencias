@@ -23,11 +23,27 @@
 # LIMITE = LIMITE DE RESULTADO
 # POTENCIADOR =  NUMERO INICIAL
 
-def run():
-    LIMITE = 100000
-    x = 2
+preguntapot = """
+Qué número querés potenciar?:
+"""
 
-    potenciador = -5
+preguntalim = """
+Cuál es el resultado máximo que te gustaría obtener?:
+"""
+
+preguntacom = """
+Desde qué potencia te gustaría comenzar? (se admiten negativos):
+"""
+
+opcionpot = int(input(preguntapot))
+opcionlim = int(input(preguntalim))
+opcioncom = int(input(preguntacom))
+
+def run():
+    LIMITE = opcionlim
+    x = opcionpot
+
+    potenciador = opcioncom
     potencia_x = x**potenciador
     while potencia_x < LIMITE:
         print(str(x) + " elevado a  " + str(potenciador) + " es igual a: " + str(potencia_x))
