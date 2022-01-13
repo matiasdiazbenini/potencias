@@ -23,18 +23,20 @@
 # LIMITE = LIMITE DE RESULTADO
 # POTENCIADOR =  NUMERO INICIAL
 
+import math
+
 def suma():
     numero1 = """
-    Introduzca el numero a sumar
+    Introduzca el numero base
     """
-    sumando = int(input(numero1))
+    base = int(input(numero1))
 
     numero2 = """
-    Introduzca el segundo numero a sumar
+    Introduzca el numero a sumar
     """
-    minuendo = int(input(numero2))
+    sumando = int(input(numero2))
 
-    resultado = sumando + minuendo
+    resultado = base + sumando
 
     print(resultado)
 
@@ -55,24 +57,56 @@ def resta():
     print(resultado)
 
 def multiplicacion():
-    pass
+    numero1 = """
+    Introduzca el numero base
+    """
+    base = int(input(numero1))
+
+    numero2 = """
+    Introduzca el multiplicador
+    """
+    multiplicador = int(input(numero2))
+
+    resultado = base * multiplicador
+
+    print(resultado)
 
 def division():
-    pass
+    numero1 = """
+    Introduzca el numero base
+    """
+    base = int(input(numero1))
+
+    numero2 = """
+    Introduzca el divisor
+    """
+    multiplicador = int(input(numero2))
+
+    resultado = base / multiplicador
+
+    print(resultado)
 
 def potenciacion():
 
     def primera():
+        numero = "numero a potenciar: "
+        x = int(input(numero))
+        potencia = "potencia a la cual elevarlo: "
+        y = int(input(potencia))
+
+        print(x**y)
+
+    def segunda():
         preguntapot = """
-        ¿Qué número querés potenciar? (recomendado entre el 1 y el 10):
+        La serie de potencias de que numero te gustaria calcular? (recomendado entre el 1 y el 10):
         """
 
         preguntalim = """
-        ¿Cuál es el resultado máximo que te gustaría obtener? (el tope de carga, se recomienda número alto):
+        Cual es el tope de resultado que te gustaria obtener? (el tope de carga, se recomienda numero alto):
         """
 
         preguntacom = """
-        ¿Desde qué potencia te gustaría comenzar? (se admiten negativos):
+        Desde que potencia te gustaria arrancar la serie? (se admiten negativos):
         """
 
         opcionpot = int(input(preguntapot))
@@ -88,21 +122,12 @@ def potenciacion():
             print(str(x) + " elevado a  " + str(potenciador) + " es igual a: " + str(potencia_x))
             potenciador = potenciador + 1
             potencia_x = x**potenciador
-
-
-    def segunda():
-        numero = "numero a potenciar: "
-        x = int(input(numero))
-        potencia = "potencia a la cual elevarlo: "
-        y =int(input(potencia))
-
-        print(str(x**y))
     
     decision = """
     Como te gustaria usar el programa de potencias? Inserte solamente un numero como respuesta.
 
-    Opcion 1: - Calcular una serie de potencias de un numero especifico dentro de un rango determinado
-    Opcion 2: - Calcular rapido una potencia tal de un numero dado
+    Opcion 1: - Calcular rapido una potencia tal de un numero dado
+    Opcion 2: - Calcular una serie de potencias de un numero especifico dentro de un rango determinado
     """
     eleccion = input(decision)
 
@@ -111,10 +136,62 @@ def potenciacion():
     elif eleccion == "2":
         segunda()
     else:
-        print("Respuesta errónea, escriba nuevamente")
+        print("Respuesta erronea, escriba nuevamente")
 
 def racionalizacion():
-    pass
+    raiz = """
+    Por cual raiz le gustaria operar?: Insertar el numero
+    Raiz de 2: (2)
+    Raiz de 3: (3)
+    Raiz de 4: (4)
+    Raiz de 5: (5)
+    Raiz personalizada: (0)
+    """
+    numero1 = """
+    Introduzca el numero base
+    """
+    base = input(numero1)
+    choice = input(raiz)
+
+    def raiz2():
+        racionalizador = 0.5
+        resultado = int(base) ** racionalizador
+        print(resultado)
+    
+    def raiz3():
+        racionalizador = 0.33
+        resultado = int(base) ** racionalizador
+        print(resultado)
+
+    def raiz4():
+        racionalizador = 0.25
+        resultado = int(base) ** racionalizador
+        print(resultado)
+    def raiz5():
+        racionalizador = 0.20
+        resultado = int(base) ** racionalizador
+        print(resultado)
+    def raiz0():
+        personalizada = """"
+        Que raiz quiere usar?:
+        """
+        eleccion = int(input(personalizada))
+
+        racionalizador = 1 / eleccion
+        resultado = int(base) ** racionalizador
+        print(resultado)
+
+    if choice == "2":
+        raiz2()
+    elif choice == "3":    
+        raiz3()
+    elif choice == "4":
+        raiz4()
+    elif choice == "5":
+        raiz5()
+    elif choice == "0":
+        raiz0()
+
 
 def run():
     programa = """
