@@ -24,10 +24,35 @@
 # POTENCIADOR =  NUMERO INICIAL
 
 def suma():
-    pass
+    numero1 = """
+    Introduzca el numero a sumar
+    """
+    sumando = int(input(numero1))
+
+    numero2 = """
+    Introduzca el segundo numero a sumar
+    """
+    minuendo = int(input(numero2))
+
+    resultado = sumando + minuendo
+
+    print(resultado)
+
 
 def resta():
-    pass
+    numero1 = """
+    Introduzca el numero base
+    """
+    base = int(input(numero1))
+
+    numero2 = """
+    Introduzca el numero a restar
+    """
+    sustraendo = int(input(numero2))
+
+    resultado = base - sustraendo
+
+    print(resultado)
 
 def multiplicacion():
     pass
