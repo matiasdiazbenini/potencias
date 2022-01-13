@@ -106,16 +106,18 @@ def run():
 
     if choose == "1":
         suma()
-    if choose == "2":    
+    elif choose == "2":    
         resta()
-    if choose == "3":
+    elif choose == "3":
         multiplicacion()
-    if choose == "4":
+    elif choose == "4":
         division()
-    if choose == "5":
+    elif choose == "5":
         potenciacion()
-    if choose == "6":
+    elif choose == "6":
         racionalizacion()
+    else:
+        print("Mal, elige de nuevo")
 
 if __name__ == "__main__":
     run()
